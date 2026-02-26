@@ -28,7 +28,7 @@ header{
     top:0;
     left:0;
     width:100%;
-    background:#08e482;
+    background:#606060;
     padding:0 40px;
     height:70px;
     display:flex;
@@ -54,7 +54,7 @@ nav a{
 }
 
 nav a:hover{
-    color:#b97f07;
+    color:#000000;
 }
 
 /* ====== ICONOS Y BUSCADOR ====== */
@@ -72,12 +72,12 @@ nav a:hover{
 }
 
 .right-menu i:hover{
-    color:#0ab000;
+    color:#00fffa;
 }
 
 /* Buscador con color */
 .search-box{
-    background:#18008a;
+    background:#380ffb;
     padding:8px 12px;
     border-radius:20px;
     display:flex;
@@ -107,7 +107,7 @@ nav a:hover{
     align-items:center;
     flex-direction:column;
     text-align:center;
-    color:#4629ff;
+    color:#4900ff;
 }
 
 .hero h1{
@@ -121,7 +121,7 @@ nav a:hover{
 }
 
 .btn{
-    background:#f54dff;
+    background:#ffffff;
     padding:12px 25px;
     border-radius:6px;
     text-decoration:none;
@@ -132,7 +132,7 @@ nav a:hover{
 }
 
 .btn:hover{
-    background:#a60000;
+    background:#000000;
 }
 
     .texto {
@@ -170,13 +170,13 @@ section h2{
     font-size:32px;
 }
 
-#sobre mi{background:#ff2ff3;}
-#casa{background:#55a2c2;}
-#chical{background:#d967c5;}
-#hortalizas{background:#26c3d4;}
-#reporteras{background:#ffadad;}
-#poesia{background:#f39c9c;}
-#eventos{background:#f88181;}
+#sobre mi{background:#7a7a7a;}
+#casa{background:#515151;}
+#chical{background:#454545;}
+#hortalizas{background:#333333;}
+#reporteras{background:#4a4a4a;}
+#poesia{background:#000000;}
+#eventos{background:#ffffff;}
 
 /* espacio por navbar fija */
 .spacer{
@@ -256,7 +256,7 @@ section h2{
         }
 
         .redes a:hover {
-            color: #714885;
+            color: #949494;
         }
 
         .info p {
@@ -314,7 +314,7 @@ section h2{
      body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background: #bacd04;
+        background: #ffffff;
         color: #fff;
     }
 
@@ -390,14 +390,14 @@ section h2{
     }
      body {
         margin: 0;
-        background: #2fee49;
+        background: #848484;
         font-family: Arial, sans-serif;
     }
 
     .carousel {
         position: relative;
-        max-width: 1100px;
-        height: 420px;
+        max-width: 1104px;
+        height: 400px;
         margin: 40px auto;
         overflow: hidden;
         background: #111;
@@ -530,7 +530,7 @@ section h2{
 <section class="hero">
     <h1>Luis Gabriel Estrada Perez</h1>
     <p>Creador y diseñador web</p>
-    <a href="#inicio" class="btn" style="color: purple">Ver mis proyectos</a>
+    <a href="#inicio" class="btn" style="color: blue">Ver mis proyectos</a>
 </section>
 <div class="spacer"></div>
 
@@ -589,67 +589,35 @@ section h2{
 
 </section>
 
-<section id="chical">
-    <h2 class="titulo">mis trabajos</h2>
+<section id="trabajos" class="trabajos">
+    <h2 style="text-align: center; font-size: 40px;">Mis Trabajos</h2>
 
-<div class="carousel">
+    <div class="carousel">
 
-    <div class="slides" id="slides">
-        <div class="slide">
-            <img src="img/foto1.jpg" alt="Imagen 1">
+        <button class="arrow left">&#10094;</button>
+        <div class="carousel-track-container">
+            <div class="carousel-track">
+                <div class="carousel-item">
+                    <img src="img/foto1.jpg" alt="111">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/foto56jpg" alt="111">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/foto3.jpg" alt="333">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/foto4.jpg" alt="444">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/foto5.jpg" alt="222">
+            </div>
         </div>
-        <div class="slide">
-            <img src="img/foto2.jpg" alt="Imagen 2">
-        </div>
-        <div class="slide">
-            <img src="img/foto3.jpg" alt="Imagen 3">
-        </div>
-        <div class="slide">
-            <img src="img/foto4.jpg" alt="Imagen 4">
-        </div>
+
+        <button class="arrow right">&#10095;</button>
+
     </div>
-
-    <div class="arrow left" onclick="prev()">&#10094;</div>
-    <div class="arrow right" onclick="next()">&#10095;</div>
-
-    <div class="dots">
-        <span class="dot active" onclick="goTo(0)"></span>
-        <span class="dot" onclick="goTo(1)"></span>
-        <span class="dot" onclick="goTo(2)"></span>
-        <span class="dot" onclick="goTo(3)"></span>
-    </div>
-
-</div>
-
-<script>
-    let index = 0;
-    const slides = document.getElementById("slides");
-    const dots = document.querySelectorAll(".dot");
-    const totalSlides = dots.length;
-
-    function showSlide(i) {
-        index = i;
-        slides.style.transform = `translateX(-${index * 100}%)`;
-        dots.forEach(dot => dot.classList.remove("active"));
-        dots[index].classList.add("active");
-    }
-
-    function next() {
-        index = (index + 1) % totalSlides;
-        showSlide(index);
-    }
-
-    function prev() {
-        index = (index - 1 + totalSlides) % totalSlides;
-        showSlide(index);
-    }
-
-    function goTo(i) {
-        showSlide(i);
-    }
-</script>
 </section>
-
 <section id="hortalizas">
      <h1 class="titulo">¿Por qué trabajar conmigo?</h1>
 
